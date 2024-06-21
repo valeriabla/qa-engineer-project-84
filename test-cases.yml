@@ -4,7 +4,7 @@
   requirement: |
     Пользователь должен иметь возможность просматривать товары и просматривать подробную информацию о товаре
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     нет
@@ -19,7 +19,7 @@
   requirement: |
     Пользователь должен иметь возможность просматривать товары и просматривать подробную информацию о товаре, включая фото и текстовое описание
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     нет
@@ -35,7 +35,7 @@
   requirement: |
     Пользователь должен иметь возможность искать товары по ключевому слову или категории
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     ключевое слово - tray
@@ -49,7 +49,7 @@
   requirement: |
     Пользователь должен иметь возможность искать товары по ключевому слову или категории
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     категория из списка
@@ -64,7 +64,7 @@
   requirement: |
     Пользователь должен иметь возможность искать товары по ключевому слову или категории
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     любая категория из списка
@@ -80,7 +80,7 @@
   requirement: |
     Пользователь должен иметь возможность фильтровать товары
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     нет
@@ -98,7 +98,7 @@
   requirement: |
     Пользователь должен иметь возможность фильтровать товары
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     нет
@@ -117,7 +117,7 @@
   requirement: |
     Пользователь должен иметь возможность добавлять товары в корзину и просматривать содержимое корзины
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     нет
@@ -127,12 +127,12 @@
   expected-result: |
     Пользователь должен перейти в корзину и увидеть в ней добавленный товар, общую сумму заказа
 
-      - summary: |
+    - summary: |
     Неуспешная проверка возможности добавлять товары в корзину и просматривать содержимое корзины
   requirement: |
     Пользователь должен иметь возможность добавлять товары в корзину и просматривать содержимое корзины
   prerequisites: |
-    Открта главная страница магазина https://hexlet-products-store.vercel.app/
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
   test-data: |
     Тестовые данные
     нет
@@ -142,3 +142,35 @@
   expected-result: |
     Пользователь не может перейти в корзину или в корзине отсутствует добавленный товар
     Сообщение "Error"
+    
+    - summary: |
+    Базовая проверка мобильной версии
+  requirement: |
+    Сайт должен иметь мобильную версию
+  prerequisites: |
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
+  test-data: |
+    Тестовые данные
+    Устройство 1 - iphone15
+    Устройство 2 - Samsung S23
+  steps:
+    - На устройстве 1 открыть главную страницу магазина
+    - На устройстве 2 открыть главную страницу магазина
+  expected-result: |
+    Открывается мобильная версия сайта по адресу https://m.hexlet-products-store.vercel.app/
+
+    - summary: |
+    Проверка на  межсайтовый скриптинг
+  requirement: |
+    Сайт должен быть безопасным и защищать данные пользователя
+  prerequisites: |
+    Открыта главная страница магазина https://hexlet-products-store.vercel.app/
+  test-data: |
+    Тестовые данные
+    Проверочная фраза <h1>Hello</h1>
+  steps:
+    - На главной странице товара в строку поиска "search" ввести проверочную фразу
+  expected-result: |
+    В правой части экрана выведено сообщение "Nothing found!"
+
+    
