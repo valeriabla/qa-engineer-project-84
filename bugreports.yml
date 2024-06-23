@@ -1,0 +1,43 @@
+---
+- summary: |
+    Не работает фильтр "In Stock"
+  environment: |
+    Google Chrome 125.0.6422.142 (Официальная сборка), (64 бит)
+    ОС Windows 11
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Убрать отметку с включенной позиции "In Stock"
+   expected-result: |
+    На странице отобразятся все товары, как в наличии, так и отсутствующие на складе
+  actual-result: |
+    На странице нет списка товаров, выведена надпись "Nothing found!"
+
+- summary: |
+    Нет мобильной версии
+  environment: |
+    Samsung S23 
+    ОС Android 14 One UI 6.1
+  steps-to-reproduce: |
+    1. На устройстве открыть главную страницу магазина https://hexlet-products-store.vercel.app/
+   expected-result: |
+    Открывается мобильная версия сайта по адресу https://m.hexlet-products-store.vercel.app/
+  actual-result: |
+    Открывается сайта по адресу https://hexlet-products-store.vercel.app/, не адаптирован
+
+    - summary: |    
+    Сайт не адаптирован под разные устройства
+  environment: |
+    Google Chrome 125.0.6422.142 (Официальная сборка), (64 бит)
+    ОС Windows 11
+    DevTools
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Открытm панель DevTools
+    3. Выбрать поочередно устройства 1, 2, 3
+    Устройство 1 - iphone SE
+    Устройство 2 - Samsung Galaxy S20 Ultra
+    Устройство 3 - Samsung Galaxy A51/71
+   expected-result: |
+    Сайт полноценно отображается на всех устройствах, размер картинок и текста адаптирован, доступны все функции
+  actual-result: |
+    На главной странице список товаров отображается внизу, после списка категорий, граница левой части сайта режет названия сайтов, часть названий категорий отображаются не полностью, размер шрифта не изменяется, изображения растягивается
