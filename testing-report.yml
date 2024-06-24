@@ -9,15 +9,15 @@
   
 - summary: |
     Проверка поиска товара по ключевому слову
-  status: pass
+  status: fail
 
 - summary: |
     Успешная проверка поиска товара по категории
-  status: pass
+  status: fail
 
 - summary: |
     Неуспешная проверка поиска товара по категории
-  status: fail
+  status: pass
 
 - summary: |
     Успешная проверка возможности фильтровать товары
@@ -36,6 +36,10 @@
   status: fail
 
 - summary: |
+    Проверка возможности добавлять товары в корзину и оформлять заказ
+  status: fail
+
+- summary: |
     Базовая проверка мобильной версии
   status: fail
   
@@ -45,4 +49,24 @@
 
 - summary: |
     Проверка на адаптивность
+  status: fail
+
+  - summary: |
+    Проверка основных функций на кроссбраузерность Google Chrome
+  status: pass
+
+  - summary: |
+    Проверка основных функций на кроссбраузерность Firefox
+  status: pass
+
+  - summary: |
+    Проверка защиты данных пользователя
+  status: fail
+
+  - summary: |
+    Проверка просмотра карточки товара и возврата в список
+  status: fail
+
+  - summary: |
+    Проверка переключения языка
   status: fail
