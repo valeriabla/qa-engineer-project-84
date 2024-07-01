@@ -43,8 +43,8 @@
     Проверка переключения языка
   status: fail
 
-  bugreports: 
-- summary: |
+bugreports:
+  - summary: |
     Не работает фильтр по категории, бренду при отключенном фильтре "In Stock"
   environment: |
     Google Chrome 125.0.6422.142 (Официальная сборка), (64 бит)
